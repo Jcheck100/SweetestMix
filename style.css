@@ -1,0 +1,687 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: rgb whitesmoke;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #988c94;
+    font-family: "Mulish";
+    font-weight: lighter;
+}
+
+h4 {
+    font-size: 20px;
+    color: rgb(146, 79, 137);
+    font-family: "Mulish";
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+    color: whitesmoke;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    border-top: 1px solid rgb(146, 79, 137);
+    border-bottom: 1px solid rgb(146, 79, 137);
+    background: #fdd1ef;
+    background: -webkit-linear-gradient(0deg, #ffa0e1 0%, #fdd1ef 100%);
+    background: linear-gradient(0deg, #ffa0e1 0%, #fdd1ef 100%);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    position: relative;
+    list-style: none;
+    padding: 0px 40px;
+}
+
+#navbar li a {
+    color: #61595e;
+    font-family: "Luxurious Script";
+    text-decoration: none;
+    font-size: 35px;
+    transition: all .3s ease-in-out;
+    text-shadow: none;
+}
+
+#navbar li a:hover {
+    color: rgb(146, 79, 137);
+    font-size: 40px;
+    text-shadow: rgb(146, 79, 137) 3px 3px 20px;
+}
+
+#navbar li a.active {
+    color: white;
+    transition: all .3s ease-in-out;
+}
+
+#navbar li a.active::after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    background: white;
+    bottom: -2px;
+    left: 40px;
+
+}
+
+#navbar li a.active:hover::after,
+#navbar li a:hover::after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    background: rgb(146, 79, 137);
+    box-shadow: rgb(146, 79, 137);
+    bottom: -2px;
+    left: 40px;
+    transition: all .3s ease-in-out;
+
+}
+
+#navbar li a.active:hover {
+    color: rgb(146, 79, 137);
+    font-size: 40px;
+    text-shadow: rgb(146, 79, 137) 3px 3px 20px;
+}
+
+#mobile {
+    display: none;
+    align-items: center;
+}
+
+#mobile i {
+    color: #61595e;
+    font-size: 24px;
+    padding-left: 20px;
+}
+
+#close{
+    display: none;
+}
+
+/* Home Page */
+#hero {
+    background-image: url(Images/Macroons.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 89vh;
+    width: 100%;
+    background-position: top 25% right;
+    padding: 25px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: #988c94 1px 1px 3px;
+}
+
+.box {
+    content: "";
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 203, 248, 0.596);
+    border: 1px solid #988c94;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 20px;
+    box-shadow: rgb(146, 79, 137) 1px 1px 25px;
+}
+
+.box h4 {
+    text-align: center;
+    padding-top: 110px
+}
+
+.box h2 {
+    text-align: center;
+    color: white;
+    text-shadow: #988c94 1px 1px 5px;
+    font-size: 40px;
+
+}
+
+.btn-one {
+    text-align: center;
+    transition: all 0.3s;
+    position: relative;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.btn-one:hover {
+    transition: all .03;
+    margin-left: 45px;
+    margin-right: 45px;
+}
+
+.btn-one a {
+    text-decoration: none;
+    color: rgb(146, 79, 137);
+    font-family: "Luxurious Script";
+    font-size: 45px;
+    font-weight: lighter;
+
+}
+
+.btn-one span {
+    transition: all 0.3s;
+
+}
+
+.btn-one::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-color: rgb(146, 79, 137, .8);
+    border-width: 1px;
+    border-style: solid;
+    transform: scale(0.1, 1);
+    border-radius: 10px;
+
+
+}
+
+.btn-one:hover span {
+    letter-spacing: 2px;
+}
+
+.btn-one:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+.btn-one::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    ;
+    border-radius: 10px;
+
+}
+
+.btn-one:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
+}
+
+#feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#feature i {
+    color: rgb(146, 79, 137);
+    font-size: 150px;
+}
+
+
+#feature .fe-box h6 {
+    margin-top: 10px;
+    padding: 9px 8px 6px;
+    line-height: 1;
+    border-radius: 14px;
+    font-size: 25px;
+    font-family: "Mulish";
+    font-weight: lighter;
+    background-color: #f5bbc7;
+    text-shadow: #988c94fb 1px 1px 5px;
+    border: .5px solid white
+}
+
+
+#feature .fe-box {
+    width: 250px;
+    background-color: #f9e0e4;
+    text-align: center;
+    padding: 15px 15px;
+    box-shadow: 5px 5px 20px rgb(146, 79, 137, .5);
+    border: 1px solid rgb(146, 79, 137);
+    border-radius: 10px;
+}
+
+#product1 {
+    text-align: center;
+}
+
+#product1 .border {
+    padding-top: 40px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.377);
+    border: 1px solid white;
+    height: 1%;
+    width: 100%;
+}
+
+#product1 .pro-container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+#product1 h2 {
+    font-family: "Luxurious Script";
+    font-size: 80px;
+    color: #61595e;
+}
+
+#product1 p {
+    font-family: "Mulish";
+    font-size: 20px;
+    color: rgb(146, 79, 137);
+    margin-bottom: 40px;
+}
+
+#product1 .pro {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid rgb(146, 79, 137);
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px rgb(146, 79, 137, .5);
+    margin: 15px;
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+
+#product1 .pro:hover {
+    box-shadow: 1px 1px 20px rgb(146, 79, 137, .8);
+    transition: all .3s ease-in-out;
+}
+
+#product1 .pro img {
+    margin-top: 5px;
+    width: 100%;
+    border-radius: 14px;
+    border: 1px solid #988c94fb
+}
+
+#product1 .pro .des {
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .pro .des span {
+    font-family: "Luxurious Script";
+    font-weight: bolder;
+    color: #61595e;
+    font-size: 26px;
+}
+
+#product1 .pro .des h5 {
+    font-family: "Mulish";
+    font-weight: bold;
+    padding-top: 7px;
+    padding-bottom: 4px;
+    color: rgb(146, 79, 137);
+    font-size: 22px;
+}
+
+#product1 .pro .des .star {
+    font-size: 20px;
+    color: #ffa0e1;
+}
+
+#product1 .pro .des h4 {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+#product1 .pro .cart {
+    margin-left: 164px;
+    width: 45px;
+    height: 45px;
+    line-height: 42px;
+    border-radius: 50px;
+    background-color: #ffa0e1;
+    font-weight: 500;
+    border: 2px solid rgb(146, 79, 137);
+    position: absolute;
+}
+
+#product1 .pro .cart a {
+    margin-left: 6.5px;
+    font-size: 25px;
+    text-align: center;
+    color: rgb(146, 79, 137);
+}
+
+#newsletter {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    content: "";
+    height: 1%;
+    width: 100%;
+    background: #fdd1ef;
+    background: -webkit-linear-gradient(0deg, #fdd1ef 0%, #ffa0e1 100%);
+    background: linear-gradient(0deg, #fdd1ef 0%, #ffa0e1 100%);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+    border: 1px solid rgb(146, 79, 137);
+}
+
+#newsletter h2 {
+    font-family: "Luxurious Script";
+    color: rgb(146, 79, 137);
+    font-size: 55px;
+}
+
+#newsletter p {
+    font-family: "Mulish";
+    color: #61595e;
+    font-size: 30px;
+}
+
+#newsletter .form {
+    display: flex;
+    width: 40%
+}
+
+#newsletter input {
+    height: 3.125rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid #61595e;
+    border-radius: 10px;
+    font-family: "Luxurious Script";
+    font-size: 30px;
+    text-align: center;
+    color: #61595e;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#newsletter button {
+    transition: all .3s ease-in-out;
+    font-family: "Mulish";
+    font-size: 20px;
+    color: #f9e0e4;
+    width: 60%;
+    height: 3.125rem;
+    padding: 0 1.25em;
+    border-radius: 10px;
+    background-color: rgb(146, 79, 137);
+    border: 1px solid #988c94;
+    cursor: pointer;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#newsletter button:hover {
+    transition: all .3s ease-in-out;
+    font-family: "Mulish";
+    font-size: 20px;
+    color: rgb(146, 79, 137);
+    width: 60%;
+    height: 3.125rem;
+    padding: 0 1.25em;
+    border-radius: 10px;
+    background-color: #f9e0e4;
+    border: 1px solid #988c94;
+    cursor: pointer;
+}
+
+footer {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .logo {
+    margin-bottom: 30px;
+
+}
+
+footer .col a {
+    font-family: "Mulish";
+}
+
+footer h4 {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    font-family: "Mulish";
+    font-size: 15px;
+    margin: 0 0 8px 0;
+    color: #61595e;
+}
+
+footer .col2 li {
+    display: flex;
+    flex-direction: column;
+    font-family: "Mulish";
+    font-size: 15px;
+    text-decoration: none;
+    color: #61595e;
+    margin-bottom: 10px;
+}
+
+footer li {
+    list-style: none;
+}
+
+footer .icon i {
+    color: #61595e;
+
+}
+
+footer i {
+    font-size: 30px;
+}
+
+/*Start Media Query*/
+@media (max-width:799px) {
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background: #fdd1ef;
+        background: -webkit-linear-gradient(0deg, #fdd1ef 0%, #ffa0e1 100%);
+        background: linear-gradient(0deg, #fdd1ef 0%, #ffa0e1 100%);
+        box-shadow: 0 40px 60px rgba(0, 0, 0, .5);
+        padding: 80px 0 0 10px;
+        border: 1px solid rgb(146, 79, 137);
+        transition: all .3s ease-in-out;
+
+    }
+
+    #navbar.active {
+        right: 0px;
+    }
+
+    #navbar li {
+        margin-bottom: 25px;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile i {
+        color: #61595e;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close{
+        top: 30px;
+        left: 30px;
+        position: absolute;
+        color: #61595e;
+        font-size: 25px;
+        display: contents;
+    }
+
+    #lg-bag{
+        display: none;
+    }
+
+    #hero {
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 25% left;
+    }
+
+    #feature{
+        justify-content: center;
+    }
+
+    #feature .fe-box{
+        margin: 15px 15px;
+    }
+
+    #product1 .pro-container{
+        justify-content: center;
+    }
+
+    #product1 .pro{
+        margin: 15px;
+    }
+
+    #newsletter .form{
+        width: 70%;
+    }
+}
+
+@media (max-width:477px) {
+    #header{
+        padding: 10px 30px;
+    }
+    h1{
+        font-size: 38px;
+    }
+    h2{
+        font-size: 32px;
+    }
+
+    #hero{
+        padding: 0 20px;
+        background-position: 55%;
+    }
+
+    #feature{
+        justify-content: space-between;
+    }
+
+    #close{
+        top: 30px;
+        left: 30px;
+        position: absolute;
+        color: #61595e;
+        font-size: 25px;
+        display: contents;
+    }
+    #feature .fe-box{
+        width: 155px;
+        margin: 0 0 15xp 0;
+    }
+
+    #product1 .pro{
+        width: 100%
+    }
+
+    #newsletter{
+        padding: 40px 20px;
+    }
+
+    #newsletter .form{
+        width: 100%;
+    }
+    
+}
+
+/*Shop Page*/
+#page-header{
+    background-image: url(Images/Shopheader.webp);
+    background-repeat: none;
+    width: 100%;
+    height: 40vh;
+}
+
+#page-header .box{
+    align-items: center;
+    content: "";
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: rgba(255, 203, 248, 0.596);
+    border: 1px solid #988c94;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 20px;
+    box-shadow: rgb(146, 79, 137) 1px 1px 25px;
+}
